@@ -1,138 +1,37 @@
-# Attendance Management System
+# Campus Flow — React project
 
-## 📌 Overview
+Campus Flow is a student-made college portal prototype for students and faculty. The styling has been simplified across the landing page, login page, and both dashboards: flatter colours, ordinary buttons, less decoration, and more straightforward spacing. The original page sections and working legacy interactions are kept so the current website is not unnecessarily broken.
 
-The **Attendance Management System** is a software application designed to simplify and manage the attendance records of students. It helps maintain attendance data efficiently, reduces manual work, and makes it easier to track students' attendance.
+## Run locally
 
-## 🎯 Features
+1. Extract the ZIP and open the `Campus-Flow-React-Migration` folder in VS Code.
+2. In the terminal, run:
+   ```bash
+   npm install
+   npm run dev
+   ```
+3. Open the localhost address printed by Vite.
 
-- **Student Management:** Add, view, update, and manage student details.
-- **Attendance Tracking:** Mark students as Present or Absent.
-- **Attendance Records:** Store and view attendance history.
-- **Attendance Reports:** Calculate attendance percentages and generate reports.
-- **Search Functionality:** Find students quickly.
-- **User-Friendly Interface:** Simple and easy-to-use design.
+## Demo login
 
-## 🛠️ Technologies Used
+- Student: `student` / `1234` (also `sana` or `sana.garg@campusflow.edu` with `1234`)
+- Faculty: `teacher` / `1234` (also `meera`, `meera.kapoor@campusflow.edu`, or `admin` with `1234`)
 
-Update this section according to the technologies used in your project.
+## Additional React tools
 
-- **Frontend:** HTML, CSS, JavaScript / React.js
-- **Backend:** Java / Node.js
-- **Database:** MySQL / MongoDB
-- **Tools:** VS Code, Git, GitHub
+The Quick Tools drawer appears after login. It uses React state and browser `localStorage`.
 
-## 📂 Project Structure
+### Student
+- Assignment tracker: add tasks, mark complete, and delete tasks.
+- Quick notes: save and delete notes.
 
-```text
-Attendance-Management-System/
-│
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── backend/
-│   └── server.js
-│
-├── database/
-│   └── database.sql
-│
-├── screenshots/
-│
-└── README.md
-```
+### Faculty
+- Assignment review queue: change sample submissions between Needs review, In progress, and Reviewed.
+- Quick announcements: post and delete short class updates.
+- Office-hours availability toggle.
 
-*Note: Modify the folder structure to match your actual project.*
+There is no Overview tab and no Resource Shelf.
 
-## ⚙️ Installation and Setup
+## Important scope note
 
-### 1. Clone the Repository
-
-```bash
-git clone <your-repository-url>
-```
-
-### 2. Navigate to the Project Directory
-
-```bash
-cd Attendance-Management-System
-```
-
-### 3. Install Dependencies
-
-If your project uses Node.js:
-
-```bash
-npm install
-```
-
-### 4. Configure the Database
-
-- Create the required database.
-- Import the SQL file if provided.
-- Update the database connection settings.
-
-### 5. Run the Application
-
-For a Node.js application:
-
-```bash
-npm start
-```
-
-For a frontend-only application, open `index.html` in your browser.
-
-*Follow the commands applicable to your actual project.*
-
-## 🚀 How to Use
-
-1. Open the application.
-2. Add or select a student.
-3. Choose the attendance date.
-4. Mark the student as Present or Absent.
-5. Save the attendance record.
-6. View attendance history and percentage reports.
-
-## 📊 Attendance Percentage
-
-The attendance percentage is calculated using the following formula:
-
-```text
-Attendance Percentage =
-(Present Classes / Total Classes) × 100
-```
-
-For example, if a student attends 18 out of 20 classes:
-
-```text
-(18 / 20) × 100 = 90%
-```
-
-## 🔮 Future Enhancements
-
-- Login and authentication for administrators and students.
-- Role-based access control.
-- QR code-based attendance.
-- Automated attendance reports.
-- Export reports to PDF or Excel.
-- Email or notification alerts for low attendance.
-- Integration with a college management system.
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Commit your changes.
-5. Submit a pull request.
-
-## 📄 License
-
-This project is available for educational and learning purposes. Add an appropriate open-source license if you intend to distribute it publicly.
-
-## 👩‍💻 Author
-
-**Your Name
+This is a staged React migration, not a full rewrite of every legacy page into idiomatic React. The existing page markup and interactions remain for compatibility, while the additional Quick Tools interface is implemented in React. The new tools save data only in the current browser; they do not send it to a server or other users.
